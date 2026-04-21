@@ -6,7 +6,13 @@ module.exports = {
       "tests/steps/**/*.ts"
     ],
     requireModule: ["ts-node/register"],
-    format: ["progress"],
+    format: [
+      "progress",
+      "allure-cucumberjs/reporter"
+    ],
+    formatOptions: {
+      resultsDir: "allure-results"
+    },
     timeout: 60000
   }
 };

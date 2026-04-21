@@ -7,7 +7,8 @@ export class CustomWorld extends World {
 
   async init() {
     this.browser = await chromium.launch({
-      headless: process.env.CI ? true : false,
+      headless: process.env.HEADLESS === "true",
+      slowMo: process.env.DEBUG ? 200 : 0,
     });
     const context = await this.browser.newContext();
     this.page = await context.newPage();

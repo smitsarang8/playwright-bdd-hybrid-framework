@@ -8,7 +8,7 @@ export class ProductsPage {
   }
 
   async addProduct() {
-    await this.page.locator('.inventory_item button').first().click();
+    await this.page.locator('.inventory_item button').first().click({timeout: 10000});
   }
 
   async goToCart() {
