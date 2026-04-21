@@ -1,0 +1,14 @@
+{
+  "name": "playwright-bdd-ui-framework",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cucumber-js tests/features/**/*.feature"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "@playwright/test": "^1.42.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
