@@ -1,5 +1,5 @@
-import { setWorldConstructor, World } from '@cucumber/cucumber';
-import { chromium, Browser, Page } from '@playwright/test';
+import { setWorldConstructor, World } from "@cucumber/cucumber";
+import { chromium, Browser, Page } from "@playwright/test";
 
 export class CustomWorld extends World {
   browser!: Browser;
@@ -7,8 +7,8 @@ export class CustomWorld extends World {
 
   async init() {
     this.browser = await chromium.launch({
-  headless: process.env.CI ? true : false
-});
+      headless: process.env.CI ? true : false,
+    });
     const context = await this.browser.newContext();
     this.page = await context.newPage();
   }
