@@ -26,3 +26,13 @@ Then('cart should contain product', async function (this: CustomWorld) {
   cart = new CartPage(this.page);
   await cart.verifyItem();
 });
+
+Given('user is loging in with locked out credentials', async function (this: CustomWorld) {
+  login = new LoginPage(this.page);
+  await login.goto();
+  await login.lockedUserLogin();
+});
+
+Then('user should see lockout message', async function () {
+  await login.verifyLockedOutMessage();
+});

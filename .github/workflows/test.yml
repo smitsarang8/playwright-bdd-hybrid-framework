@@ -31,3 +31,7 @@ jobs:
         run: npm run test:ci || true
         env:
           HEADLESS: true
+          STANDARD_USER_USERNAME: ${{ secrets.STANDARD_USER_USERNAME }}
+          STANDARD_USER_PASSWORD: ${{ secrets.STANDARD_USER_PASSWORD }}
+          LOCKED_OUT_USER_USERNAME: ${{ secrets.LOCKED_OUT_USER_USERNAME }}
+          LOCKED_OUT_USER_PASSWORD: ${{ secrets.LOCKED_OUT_USER_PASSWORD }}
