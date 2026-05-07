@@ -28,7 +28,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run tests
-        run: npm run test:ci || true
+        run: npm run test:ci
         env:
           HEADLESS: true
           STANDARD_USER_USERNAME: ${{ secrets.STANDARD_USER_USERNAME }}
