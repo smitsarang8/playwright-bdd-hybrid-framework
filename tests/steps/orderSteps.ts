@@ -27,7 +27,7 @@ Then('cart should contain product', async function (this: CustomWorld) {
   await cart.verifyItem();
 });
 
-Given('user is loging in with locked out credentials', async function (this: CustomWorld) {
+Given('user is logging in with locked out credentials', async function (this: CustomWorld) {
   login = new LoginPage(this.page);
   await login.goto();
   await login.lockedUserLogin();

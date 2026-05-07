@@ -7,6 +7,6 @@ Feature: UI Order Flow
     When user adds product to cart
     Then cart should contain product
 
-  Scenario: User is lockde out
-    Given user is loging i with locked out credentials
+  Scenario: User is locked out
+    Given user is logging in with locked out credentials
     Then user should see lockout message
